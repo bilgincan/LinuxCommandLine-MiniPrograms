@@ -9,11 +9,11 @@ Theese commands are compile / exej:
 
 -exej: Same as java, it executes the .class files in the class folder. exej gets one parameter and it is the file, which must be executed
 
-For setting up theese commands on Linux/Ubuntu you need to write theese commands on terminal:
-chmod +x compile
-chmod +x exej
-cd /bin
-sudo ln -s [directory_of_the_files]*/compile
-sudo ln -s [directory_of_the_files]*/exej
+For setting up theese commands on Linux/Ubuntu you need to write theese commands on terminal:<br>-
+-chmod +x compile<br>
+-chmod +x exej<br>
+-cd /bin<br>
+-sudo ln -s [directory_of_the_files]*/compile<br>
+-sudo ln -s [directory_of_the_files]*/exej<br>
 
 *The directory, in which compile and exej source codes are stored
