@@ -1,0 +1,36 @@
+#!/bin/bash
+function makeNmove() {
+	
+	if [ ! -d executablejava ]; then
+		mkdir "executablejava"
+	fi
+mv *.class executablejava
+}
+
+while :; do
+    case $1 in
+        -h|--help) echo "compile is used for javac (java compiler), it creates a folder called 'executable' and moves '.class' files in there
+
+
+	-h || --help this screen appears
+	-o || --only [arg] this parameter takes an argument. If you want to compile only one java file you compile with this"            
+        ;;
+        -o|--only)  if [ "$2" != "" ]; then 
+		javac "$2"
+		makeNmove
+	else
+		echo "Invalid argument, you need to write which java file must be only compiled."
+	fi           
+        ;;
+        *) break
+    esac
+    shift
+done
+
+
+
+
+if [ "$#" -eq 0 ]; then
+	javac *.java
+	makeNmove
+fi

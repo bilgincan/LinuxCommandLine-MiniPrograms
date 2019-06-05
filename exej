@@ -1,0 +1,22 @@
+#!/bin/bash
+while :; do
+    case $1 in
+        -h|--help) echo "For shortcut for javac (java compiler) is compile, this the execution of the compiled codes (java -- command)
+	
+	exej [arg]	
+
+	This commands needs an argument, in which you must tell which class must be run 
+
+	-h||--help With this command you see that screen"            
+        ;;
+        *) break
+    esac
+    shift
+done
+if [ "$#" -eq 1 ]; then 
+	cd "executablejava"
+	java $1
+	cd ".."
+else
+	echo "Invalid arguments for that command"
+fi
