@@ -1,0 +1,18 @@
+#!/bin/bash
+if [ "$#" -eq 1 ]; then
+	JAVA=".java"
+	compile -o "$1$JAVA"
+	exej "$1"
+else
+	echo "Invalid argument for that command"
+fi
+
+while :; do
+    case $1 in
+        -h|--help) echo "With that command you compile and run a java code
+	This command needs only one argument."            
+        ;;
+ *) break
+    esac
+    shift
+done
